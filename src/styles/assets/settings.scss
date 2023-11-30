@@ -1,0 +1,63 @@
+$primary-color: #032541;
+$primary-color-lighter: lighten($primary-color, 4%);
+$primary-color-darker: darken(#032541, 10%);
+$secondary-color: #01B4E4;
+$secondary-color-lighter: lighten($secondary-color, 50%);
+$secondary-color-darker: darken(#01B4E4, 20%);
+$text: #aaa;
+
+$border: 0.065px;             //1px
+$small-size: 0.5rem;          //8px 
+$normal-size-ligher: 0.65rem; //10px
+$normal-size: 1rem;           //16px
+$big-size: 1.5rem;            //24px
+$full: 100%;
+$half: 50%;
+$full-opacity: 1;
+$opacity: 0.9;
+$opacity-lighter: 0.8;
+
+@mixin flex-container($wrap: wrap, $direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin respond-to($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin container($display: flex, $margin: auto, $justify: space-between, $width: 300px) {
+    display: $display;
+    margin: 0 $margin;
+    justify-content: $justify;
+    max-width: $width;
+
+    @include respond-to(664px) {
+        max-width: 632px;
+    }
+
+    @include respond-to(996px) {
+        max-width: 964px;
+    }
+
+    @include respond-to(1328px) {
+        max-width: 1296px;
+    }
+
+    @include respond-to(1660px) {
+        max-width: 1628px;
+    }
+
+    @include respond-to(1992px) {
+        max-width: 1960px;
+    }
+
+    @include respond-to(2324px) {
+        max-width: 2292px;
+    }
+}

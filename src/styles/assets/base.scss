@@ -1,0 +1,31 @@
+// _base.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: $primary-color-lighter;
+    margin: 0;
+}
+
+main {
+    @include flex-container(wrap, row, center, center);
+}
+
+body {
+    background-color: $primary-color-lighter;
+    color: $secondary-color-darker;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-favorite-message {
+    font-size: $big-size;
+    text-align: center;
+}

@@ -1,0 +1,87 @@
+// Genre component 
+#control-panel {
+    margin: $normal-size-ligher auto;
+
+    .container {
+        @include container(flex, auto, start);
+    }
+
+    /* Style for the dropdown container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+
+        /* Show the dropdown content when the dropdown button is clicked */
+        &:hover {
+            .dropdown-content {
+                display: block;
+            }
+        }
+
+        /* Style for the dropdown button */
+        .dropbtn {
+            width: 11.25rem; //180px
+            margin-right: $normal-size-ligher;
+            padding: $normal-size-ligher;
+            text-align: left;
+            font-size: $normal-size;
+            background-color: inherit;
+            color: white;
+            border: none;
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+
+        /* Style for the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: $primary-color;
+            max-width: 11.25rem; //180px
+            width: $full;
+            z-index: 1;
+            margin-top: $border;
+            border: $border solid $primary-color;
+            border-radius: $small-size;
+        }
+
+        // genres
+        .tag {
+            width: $full;
+            display: flex;
+            padding: $small-size;
+            cursor: pointer;
+            color: white;
+    
+            &:hover {
+                background-color: $primary-color-lighter;
+            }
+    
+            &.highlight {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .favorite,
+    .remove-all {
+        width: 10.625rem; //170px
+        margin-right: $small-size;
+        padding: $normal-size-ligher;
+        font-size: $normal-size;
+        text-align: left;
+        background-color: inherit;
+        color: white;
+        border: none;
+        border-radius: $small-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+// Import your partials
+@import 'assets/settings';
+@import 'assets/base';
+
+// components
+@import 'components/loader';
+@import 'components/header';
+@import 'components/modal';
+@import 'components/control-panel';
+@import 'components/movie-product';
+@import 'components/pagination';
