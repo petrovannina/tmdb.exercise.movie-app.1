@@ -1,0 +1,33 @@
+.pagination {
+    @include flex-container();
+    margin: $normal-size-ligher 2rem;
+    color: white;
+
+    &.hidden {
+        display: none;
+    }
+
+    .page {
+        cursor: pointer;
+        padding: $big-size;
+
+        .disabled {
+            cursor: not-allowed;
+            color: grey;
+        }
+    }
+
+    .current {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: $normal-size-ligher $big-size;
+        border: $small-size solid $secondary-color;
+        border-radius: $half;
+        color: $secondary-color;
+        font-size: $big-size;
+        font-weight: 600;
+    }
+}

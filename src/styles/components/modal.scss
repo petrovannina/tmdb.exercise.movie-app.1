@@ -1,0 +1,38 @@
+.modal {
+    position: fixed;
+    top: $normal-size-ligher;
+    right: $normal-size-ligher;
+    max-width: 18.75rem; // 300px
+    display: none;
+    background-color: white;
+    padding: $normal-size-ligher $big-size;
+    border: $border solid $primary-color;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0.28rem $small-size rgba(0, 0, 0, 0.1);
+    opacity: $opacity-lighter;
+
+    &:hover {
+        opacity: $full-opacity;
+    }
+
+    .modal-content {
+        @include flex-container(nowrap, row, space-between, center);
+    }
+
+    .close {
+        font-size: $normal-size;
+        font-weight: bold;
+        cursor: pointer;
+        color: $text;
+        margin-right: $normal-size-ligher;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &:hover .close {
+        color: black;
+    }
+}

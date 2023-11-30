@@ -1,0 +1,81 @@
+// movie-product.scss
+
+.movie {
+    position: relative;
+    width: 18.75rem;  // 300px
+    margin: $normal-size;
+    border-radius: $small-size;
+    box-shadow: 0.013rem 0.25rem $small-size rgba(0, 0, 0, 0.1);
+    @include flex-container(nowrap, column, space-between, stretch);
+
+    img {
+        width: $full;
+        height: -webkit-fill-available;
+        border-radius: $normal-size;
+    }
+
+    .movie-info {
+        position: absolute;
+        bottom: 0;
+        width: $full;
+        padding: $small-size $normal-size $small-size;
+        display: flex;
+        flex-direction: column;
+        background-color: $secondary-color-lighter;
+        opacity: $opacity-lighter;
+        color: $secondary-color;
+        border-radius: 0 0 $normal-size $normal-size;
+
+        h3 {
+            margin: 0;
+            font-weight: bold;
+            font-size: $normal-size;
+        }
+    }
+
+    @include respond-to(992px) {
+        .movie-info {
+            display: none;
+        }
+
+        &:hover {
+            .movie-info {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0;
+                width: $full;
+                padding: $small-size $normal-size $small-size;
+                background-color: $secondary-color-lighter;
+                opacity: $opacity-lighter;
+                color: $secondary-color;
+                border-radius: 0 0 $normal-size $normal-size;
+
+                h3 {
+                    margin: 0;
+                    font-weight: bold;
+                    font-size: $normal-size;
+                }
+            }
+        }
+    }
+
+    .add-to-favorite,
+    .remove-from-favorite {
+        position: absolute;
+        top: $normal-size-ligher;
+        right: $normal-size-ligher;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: $big-size;
+        border: $border solid $secondary-color;
+        color: $secondary-color;
+        background: $secondary-color-lighter;
+        opacity: $opacity-lighter;
+        border-radius: $half;
+
+        &.hidden {
+            display: none;
+        }
+    }
+}

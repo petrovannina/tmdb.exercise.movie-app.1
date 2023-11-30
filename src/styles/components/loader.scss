@@ -1,0 +1,45 @@
+#loader-wrapper {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: $full;
+    height: $full;
+    z-index: 999;
+
+    .overlay {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: $full;
+        height: $full;
+        background: $primary-color;
+        opacity: $opacity;
+    }
+
+    .loader {
+        position: absolute;
+        display: block;
+        top: $half;
+        left: $half;
+        width: 3.125rem; // 50px
+        height: 3.125rem; // 50px
+        border: $small-size solid #f3f3f3;
+        border-top: $small-size solid #3498db;
+        border-radius: $half;
+        animation: spin 1s linear infinite;
+        margin-top: -$big-size;
+        margin-left: -$big-size;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
